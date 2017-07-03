@@ -36,7 +36,9 @@ class Elevator {
         this.log()
     }
   }
-  call() { }
+  call(person) {
+    this.requests = [...this.requests, person.originFloor]
+  }
   log(){
     console.log(`Direction: ${this.direction} | Floor: ${this.floor}`)
   }
